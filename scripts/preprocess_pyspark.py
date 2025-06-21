@@ -4,7 +4,7 @@ from pyspark.sql.functions import to_date, when, col, datediff, current_date
 #Create SparkSession
 spark = SparkSession.builder \
         .appName("YahooUserPreprocessing") \
-        .getorCreate()
+        .getOrCreate()
         
 #Read Raw data
 df = spark.read.csv("data/users.csv", header=True, inferSchema=True)
